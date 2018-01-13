@@ -1,0 +1,17 @@
+entity Court {
+	name String
+}
+
+entity Reservation{
+	startDate Instant,
+    endDate Instant
+}
+
+entity Timetable{
+	startDate ZonedDateTime,
+    endDate ZonedDateTime,
+}
+
+relationship OneToMany {
+	Court{reservation} to Reservation
+}
